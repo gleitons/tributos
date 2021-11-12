@@ -10,7 +10,7 @@
     <script src="main-rural.js"></script>
     <title id="tituloSalvar"></title>
 </head>
-<body>
+<body onload="horaAgora()">
     <div id="dadosDiv">
         <div class="fundoInsereDados"> 
             <fieldset>
@@ -94,11 +94,11 @@
                         </tr>
                         <tr>
                             <td class="IDados">CPF Conjuge:</td>
-                            <td><input type="text" name="" placeholder="ex. 000.000.000-00" id="cpfProprietario" required></td>
+                            <td><input type="text" name="" placeholder="ex. 000.000.000-00" id="cpfconjuge" required></td>
                         </tr>
                         <tr>
                             <td class="IDados">Indentidade Conjuge:</td>
-                            <td><input type="text" placeholder="ex: MG00000" name="" id="identidadeProprietario"></td>
+                            <td><input type="text" placeholder="ex: MG00000" name="" id="identidadeconjuge"></td>
                         </tr>
                     </table>
                      
@@ -111,12 +111,12 @@
                     <legend>Imóvel Rural</legend>
                     <table>
                         <tr>
-                            <td class="IDados">Tipo de Acabamento: </td>
-                            <td><select name="" id="tipoDeAcabamento">
+                            <td class="IDados">Aptidão da Terra: </td>
+                            <td><select name="" id="aptdaoTerra">
                                 <option value="" id="" >Selecione</option>
                                 <option value="4000" id="aptdaoboa">Lavoura Aptidão Boa</option>
                                 <option value="2500" id="aptdaoregular">Lavoura Aptidão Regular </option>
-                                <option value="1500" id="aptdaorestrita">Lavoura Aptdão Restrita </option>
+                                <option value="1500" id="aptdaorestrita">Lavoura Aptidão Restrita </option>
                                 <option value="1200" id="pastagemplantada">Pastagem Plantada </option>
                                 <option value="600" id="silvicultura">Silvicultura ou Pastagem Natural</option>
                                 <option value="500" id="preservacao">Presenvação da Fauna e Flora  </option>
@@ -124,9 +124,9 @@
                         </tr>
                         <tr>
                             <td class="IDados">Passe o Mouse para mais informações.</td>
-                            <td><button><abbr title="Lavoura Aptidão Boa">Tipo 01</abbr></button>
-                                 <button><abbr title="Lavoura Aptidão Regular">Tipo 02</abbr></button> <button><abbr title="Lavoura Aptdão Restrita">Tipo 03</abbr></button> <button><abbr title="Pastagem Plantada">Tipo 04</abbr> </button> 
-                                 <button><abbr title="Silvicultura ou Pastagem Natural">Tipo 05</abbr></button> <button><abbr title="Presenvação da Fauna e Flora">Tipo 06</abbr></button></td>
+                            <td><button class="btninforma"><abbr title="Lavoura Aptidão Boa">Tipo 01</abbr></button>
+                                 <button class="btninforma"><abbr title="Lavoura Aptidão Regular">Tipo 02</abbr></button> <button class="btninforma"><abbr title="Lavoura Aptdão Restrita">Tipo 03</abbr></button> <button class="btninforma"><abbr title="Pastagem Plantada">Tipo 04</abbr> </button> 
+                                 <button class="btninforma"><abbr title="Silvicultura ou Pastagem Natural">Tipo 05</abbr></button class="btninforma"> <button class="btninforma"><abbr title="Presenvação da Fauna e Flora">Tipo 06</abbr></button></td>
                         </tr>
                     </table>
                     <!-- <table>
@@ -171,8 +171,8 @@
                     </table>  
                 </fieldset>
                 
-                <input  class="botaoEnviar" type="submit" onclick="calcularAvaliacao()" value="Gerar Avaliação Urbana" />
-                
+                <input  class="botaoEnviar" type="submit" onclick="calcularAvaliacao()" value="Gerar Avaliação Urbana" /></br>
+                <!--Criado por Gleiton Ap. Soares de Souza-->
             </fieldset>
                 </fieldset>
                 

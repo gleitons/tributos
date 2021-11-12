@@ -1,50 +1,40 @@
         function calcularAvaliacao() {
 
-            let dataDoc = new Date();
-            let diaDoc = dataDoc.getDate();
-            let mesDoc = dataDoc.getMonth();
-            let anoDoc = dataDoc.getFullYear();
-
-            if (mesDoc==0){
-                var mesDDoc = "Janeiro"
-            } else if (mesDoc == 1){
-                var mesDDoc = "Fevereiro"
-            }
-            else if (mesDoc == 2){
-                var mesDDoc = "Março"
-            }
-            else if (mesDoc == 3){
-                var mesDDoc = "Abril"
-            }
-            else if (mesDoc == 4){
-                var mesDDoc = "Maio"
-            }
-            else if (mesDoc == 5){
-                var mesDDoc = "Junho"
-            }else if (mesDoc == 6){
-                var mesDDoc = "Julho"
-            }else if (mesDoc == 7){
-                var mesDDoc = "Agosto"
-            }else if (mesDoc == 8){
-                var mesDDoc = "Setembro"
-            }else if (mesDoc == 9){
-                var mesDDoc = "Outubro"
-            }else if (mesDoc == 10){
-                var mesDDoc = "Novembro"
-            }else if(mesDoc == 11){
-                var mesDDoc = "Dezembro"
-            }
-           
-
-            let proT = document.querySelector('input#protoEcidade');
-            let proTString = String(proT.value);
+            let diaHoje = calculaData()[0];
+            let mesHoje = calculaData()[1];
+            let anoHoje = calculaData()[2];
             
-            let nSol = document.querySelector('input#nomeSolicitante');
-            let nomeSol = String(nSol.value);
-            let solNome = nomeSol.toLocaleUpperCase()
+            let proT = document.querySelector('input#protoEcidade').value;
+
+            let nSol = document.querySelector('input#nomeSolicitante').value;
+            let solNome = nSol.toLocaleUpperCase()
 
             let func = document.getElementById('selectFun');
             let funcSelecionado = func.options[func.selectedIndex].text;
+            
+            let nomeFazenda = document.getElementById('nomeFazenda').value;
+
+            let denominacaoFazenda = document.getElementById('denominacaoFazenda').value;
+            let matriculaFazenda = document.getElementById('matriculaFazenda').value;
+            let folhaRegistro = document.getElementById('folhaRegistro').value;
+            let livroRegistro = document.getElementById('livroRegistro').value;
+            let diaRegistro = document.getElementById('diaRegistro').value;
+            let mesRegistro = document.getElementById('mesRegistro').value;
+            let anoRegistro = document.getElementById('anoRegistro').value;
+            let nomeProprietario = document.getElementById('nomeProprietario').value;
+            let cpfProprietario = document.getElementById('cpfProprietario').value;
+            let identidadeProprietario = document.getElementById('identidadeProprietario').value;
+            let nomeConjuge = document.getElementById('nomeConjuge').value;
+            let cpfconjuge = document.getElementById('cpfconjuge').value;
+            let identidadeconjuge = document.getElementById('identidadeconjuge').value;
+
+            let aptdaoTerra = document.getElementById('aptdaoTerra');
+            let valorAptdao = aptdaoTerra.options[TipoDeAc.selectedIndex].value;
+            let descricaoAptdao = aptdaoTerra.options[TipoDeAc.selectedIndex].text;
+
+
+
+
 
             let setor = document.getElementById('selSetor');
             let setSel = setor.options[setor.selectedIndex].value;
@@ -57,8 +47,7 @@
             let n = document.querySelector('input#areaLote').value;
             let ac = document.querySelector('input#areaConstrucao').value;
 
-            let TipoDeAc = document.getElementById('tipoDeAcabamento');
-            let valorTAcabamento = TipoDeAc.options[TipoDeAc.selectedIndex].value;
+            
 
             let somaImovel = (valorTAcabamento * ac)+(setorSelecionado * n);
 
@@ -270,6 +259,69 @@
 
         }
     }
+
+
+
+
+
+    function calculaData(){
+            let dataDoc = new Date();
+            let diaDoc = dataDoc.getDate();
+            let mesDoc = dataDoc.getMonth();
+            let anoDoc = dataDoc.getFullYear();
+
+            if (mesDoc==0){
+                var mesDDoc = "Janeiro"
+            } else if (mesDoc == 1){
+                var mesDDoc = "Fevereiro"
+            }
+            else if (mesDoc == 2){
+                var mesDDoc = "Março"
+            }
+            else if (mesDoc == 3){
+                var mesDDoc = "Abril"
+            }
+            else if (mesDoc == 4){
+                var mesDDoc = "Maio"
+            }
+            else if (mesDoc == 5){
+                var mesDDoc = "Junho"
+            }else if (mesDoc == 6){
+                var mesDDoc = "Julho"
+            }else if (mesDoc == 7){
+                var mesDDoc = "Agosto"
+            }else if (mesDoc == 8){
+                var mesDDoc = "Setembro"
+            }else if (mesDoc == 9){
+                var mesDDoc = "Outubro"
+            }else if (mesDoc == 10){
+                var mesDDoc = "Novembro"
+            }else if(mesDoc == 11){
+                var mesDDoc = "Dezembro"
+            }
+           return [diaDoc, mesDDoc, anoDoc]
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         function operator() {
             let data = new Date;

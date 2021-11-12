@@ -149,3 +149,14 @@ h2 {
 .diminuirLetra{
     font-size: 1.2rem;
 }
+.btninforma{
+    background-color:none;
+    border: none;
+    border-bottom: rgb(66, 66, 66) solid 1px;
+    text-decoration: none;
+    transition-duration: 3500ms;
+}
+.btninforma:hover{
+    background-color: red;
+    color: white;
+}
