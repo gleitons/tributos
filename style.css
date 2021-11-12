@@ -18,6 +18,8 @@ h1{
 }
 h2 {
     font-size: 17px;
+    margin: 0px;
+    padding: 0px;
 }
 
 .folhaA4 {
@@ -25,6 +27,7 @@ h2 {
     margin: 0;
     width: 100%px;
     padding: 10%;
+    height: 25cm;
     
     
 }
@@ -33,9 +36,9 @@ h2 {
     background-image: url(src/fundo-certidao-min.jpeg);
     background-size: 100%;
     background-repeat: no-repeat;
-    size-adjust: 100%;
+    
     margin: auto;
-
+   
     
 }
 .topoBrasao{
@@ -57,7 +60,7 @@ h2 {
 
 }    
 .certidaoValorVenal {
-    font-size: 15px;
+    font-size: 13px;
     text-align: center;
 }
 .assinaturaLateral {
@@ -72,6 +75,7 @@ h2 {
     margin: auto;
 }
 .assinaTOperador p{
+    padding-top: 10px;
     font-size: 12px;
 }
 .AssinOp {
@@ -141,4 +145,7 @@ h2 {
     .imprimirAgora {
         display: none !important;
     }
+}
+.diminuirLetra{
+    font-size: 1.2rem;
 }

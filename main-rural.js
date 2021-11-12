@@ -1,12 +1,5 @@
         function calcularAvaliacao() {
-            
-                
-            
 
-
-
-
-            
             let dataDoc = new Date();
             let diaDoc = dataDoc.getDate();
             let mesDoc = dataDoc.getMonth();
@@ -252,9 +245,11 @@
                         <strong>* Área Construída:</strong> <u>${valorAcabaFinal}</u> ${mensagemAreaConstruida}<strong>(*VT)</strong>
                     </p>
                     <p>
-                        <strong>*Valor total do Imóvel:</strong> <u>${totalImovels}</u> (Sendo <strong>${valorVenalLotes}</strong> o valor do lote ${lote}, na Quadra ${quadra} do ${setSelect} com construção avaliada em <strong>${valorAcabaFinal}</strong>. <i>De acordo com o código tributário 544/2005, valor de ${valorm2imovelSetor} por M²).</i><strong>(*VT)</strong> - <strong>VT= </strong>(Valor de tributação).
-                    </p>                    
-                        `
+                        <strong>*Valor total do Imóvel:</strong> <u>${totalImovels}</u> (Sendo <strong>${valorVenalLotes}</strong> o valor do lote ${lote}, localizado na Quadra ${quadra} do ${setSelect} e a área construida avaliada em <strong>${valorAcabaFinal}</strong>. <i>Calculo de acordo com o código tributário 544/2005, onde o valor é  ${valorm2imovelSetor} por M²).</i><strong>(*VT)</strong>
+                    </p>
+                    <p>
+                        <strong>VT= </strong>(Valor de tributação).
+                    </p>`
                     localEData.innerHTML = `Lagoa dos Patos – MG, ${diaDoc} de ${mesDDoc} de ${anoDoc}`
 
             operador.innerHTML = `${funcSelecionado}`
@@ -272,15 +267,6 @@
             }else{
                 document.getElementById('avaliacaoFundo').style.display = 'block';
             }
-
-            
-            
-            
-
-            
-
-
-
 
         }
     }
