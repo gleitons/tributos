@@ -141,3 +141,73 @@
     
 
         }
+
+
+
+
+        <p>
+                    Certifico a <strong>pedido verbal e protocolado</strong> de <strong>${nSol}</strong>, pessoa interessada e a quem interessar que,  verificando os valores de Terrenos Rurais do CTM <strong>(Código Tributário Municipal) e CVTN (Comissão de Valor da Terra Nua)</strong>, verifica-se constar o seguinte: </br>
+            O Imóvel <strong>${nomeFazenda}</strong>, lugar denominado <strong>${denominacaoFazenda}</strong>, imóvel: ${matriculafFazenda}${folhaRegistro}${livroRegistro}, registrado em <strong>${diaRegistro} de ${mesRegistro}  ${anoRegistro}</strong>, propriedade de: <strong>${nomeProprietario}</strong>, CPF: ${cpfProprietario}, ${identidadeProprietario} ${esposa} com área total de <strong>${areaTotalN}</strong> <strong><i>(${exteAlqueire}${exteHectares},${exteAres}${exteCentiares})</i></strong>, descrita nesta avaliação como ${descricaoAptdao} de acordo com o solicitante, com valor total de ${valorTerra} <i><strong>( ${milhoes} ${milhares} ${reais} ${centavos})</strong></i>, sendo o preço por Hectare a ${valorporHectare}, localizado neste Município de Lagoa dos Patos – MG
+                </p>
+                <div>
+                    <div class="tabelaInfo"> 
+                        <h5 class="leiAnexo">Anexo VII - Lei Complementar 254/2005 <br> Avalição de Terra Nua/2021</h5>
+                        <table>
+                            <tr>
+                                <td class="linhaTab corLinha">Item</td>
+                                <td class="linhaTab corLinha">Área</td>
+                                <td class="linhaTab corLinha">Valor por Ha</td>
+                                <td class="linhaTab corLinha">Caracteristicas da Área</td>     
+                                <td class="linhaTab corLinha">Valor Venal Total</td>                            
+                                
+                                
+                            </tr>
+                            <tr >  
+                                <td class="linhaTab">01</td>
+                                <td class="linhaTab">55,30 Ha</td>
+                                <td class="linhaTab">R$ 1.500,00</td>
+                                <td class="linhaTab">Área agricultável de primeira - Lavoura de aptidão boa</td>       
+                                <td class="linhaTab">R$ 150.000,00</td>                          
+                               
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="valorVenais">
+                    
+                </div>
+
+               <div class="assinaturasEQr">
+                <div class="assEsquerdo">
+                    
+                </div>
+                <div class="assDireito">
+                    <div class="nomeAss">
+                        <div class="AssMaior">GLEITON APARECIDO SOARES DE SOUZA</div>
+                        <div class="cpfAss" id="cpfFunc">CPF: 08303020692</div>
+                    </div>
+                    <div class="DadosAss">
+                        <p class="assinaEData">
+                            Emitido Digitalmente por</br>
+                            <strong>GLEITON APARECIDO SOARES DE SOUZA</strong> <br>CPF: 083.030.206-92 <br>14/10/2021 - 10:55hs <br> -3 UTM LDP MG</div>
+                        </p>
+                    </div>
+                </div>
+                </div>
+                <div>
+                    <h2 id="localEData">
+                        Lagoa dos Patos – MG, (27 de maio de 2021)
+                    </h2>
+                    <div class="assinaTOperador">
+                        <p>
+                            ________________________________________
+                        </p>
+                        <div class="AssinOp" id="operador">Nome funcionario Responsável
+                        </div>
+                        <p>
+                            Divisão de Receitas e Cadastramento Imobiliário
+                            Município de Lagoa dos Patos/MG –
+                            CNPJ 16.901.381/0001-10
+                        </p>
+                        <div class="nomeFuncionarios" id="funcionarioDados"></div>
+                    </div>

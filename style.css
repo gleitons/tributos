@@ -1,6 +1,5 @@
-
-:root{
-
+.marca {
+    border: black solid 1px;
 }
 legend {
     font-weight: 800;
@@ -75,7 +74,7 @@ h2 {
     margin: auto;
 }
 .assinaTOperador p{
-    padding-top: 10px;
+    padding-top: -10px;
     font-size: 12px;
 }
 .AssinOp {
@@ -159,4 +158,62 @@ h2 {
 .btninforma:hover{
     background-color: red;
     color: white;
+}
+.assDireito {
+    padding: 2px;
+    margin: 10px;
+    
+    display: inline-flex;
+    width: 200px;
+    height: 50px;
+    background-image: url(src/fundo-assinatura.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+.assEsquerdo {
+
+   width: 390px;
+}
+.assinaturasEQr{
+    
+    margin: auto;
+    display: inline-flex;
+    
+}
+.DadosAss{
+
+}
+.AssMaior{
+    margin-top: 10%;
+    font-size: 6px;
+}
+.cpfAss {
+    font-size: 6px;
+}
+.assinaEData{
+    font-size: 5px;
+}
+.nomeFuncionarios {
+    height: 20px;
+}
+.tabelaInfo {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border: black solid 1px;
+    border-radius: 8px 8px 0px 0px;
+    margin: 0px;
+    
+}
+.linhaTab {
+    border: black solid 1px;
+    font-size: 15px;
+}
+.leiAnexo {
+    margin: 10px;
+}
+.corLinha {
+    background-color: rgb(189, 189, 189);
+    font-weight: 700;
+    font-size: 16px;
 }

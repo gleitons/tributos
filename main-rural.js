@@ -4,6 +4,8 @@
             let diaHoje = calculaData()[0];
             let mesHoje = calculaData()[1];
             let anoHoje = calculaData()[2];
+            let horaNow = calculaData()[3]
+            let minuNow = calculaData()[4]
             
             
             let proT = document.querySelector('input#protoEcidade').value;
@@ -17,19 +19,33 @@
             let funcSelecionado = func.options[func.selectedIndex].text;
             
             
-            let nomeFazenda = document.getElementById('nomeFazenda').value;
+            let nomeFazenda = document.getElementById('nomeFazenda').value.toLocaleUpperCase();
             
 
-            let denominacaoFazenda = document.getElementById('denominacaoFazenda').value;
-            let matriculaFazenda = document.getElementById('matriculaFazenda').value;
-            let folhaRegistro = document.getElementById('folhaRegistro').value;
-            let livroRegistro = document.getElementById('livroRegistro').value;
+            let denominacaoFazenda = document.getElementById('denominacaoFazenda').value.toLocaleUpperCase();
+            let matriculaFazendaf2 = document.getElementById('matriculaFazenda').value;
+            let matriculaFazendaf = matriculaFazendaf2.length;
+            
+            if (matriculaFazendaf <= 0) {
+                var matriculafFazenda = "" 
+            } else {
+                var matriculafFazenda = `<strong>MATRICULA: ${matriculaFazendaf2}</strong>` 
+            }
+
+
+                     
+            let folhaRegistrof = document.getElementById('folhaRegistro').value;
+            let folhaRegistro = `, folhas ${folhaRegistrof}`
+            let livroRegistrof = document.getElementById('livroRegistro').value;
+            let livroRegistro =  `, livro ${livroRegistrof}`
             let diaRegistro = document.getElementById('diaRegistro').value;
-            let mesRegistro = document.getElementById('mesRegistro').value.toUpperCase();
+            let mesRegistrof = document.getElementById('mesRegistro').value;
+            let mesRegistro = mesdeReg(mesRegistrof)
             let anoRegistro = document.getElementById('anoRegistro').value;
             let nomeProprietario = document.getElementById('nomeProprietario').value;
             let cpfProprietario = document.getElementById('cpfProprietario').value;
-            let identidadeProprietario = document.getElementById('identidadeProprietario').value;
+            let identidadeProprietariof = document.getElementById('identidadeProprietario').value;
+            let identidadeProprietario =  `identidade de número ${identidadeProprietariof}`
             let nomeConjuge = document.getElementById('nomeConjuge').value;
             let cpfconjuge = document.getElementById('cpfconjuge').value;
             let identidadeconjuge = document.getElementById('identidadeconjuge').value;
@@ -64,8 +80,17 @@
                 var centavos = "";
             } else {
                 var centavosf = nomePorExtenso(centaValor);
-                var centavos = `e ${centavosf}`
+                var centavos = `e ${centavosf} centavos`
             }
+            if (vaReais <= 0) {
+                var reais = "reais";
+            } else {
+
+                let reaisfz = nomePorExtenso(vaReais);
+                let reaisf = reaisfz.toString().replace("e Zero","")
+                var reais = `${reaisf} reais`            
+            }
+
 
             if (vaMilhares <= 0) {
                 var milhares = "";
@@ -87,13 +112,7 @@
      
             }
             
-            if (vaReais <= 0) {
-                var reais = "";
-            } else {
-                let reaisf = nomePorExtenso(vaReais);
-                var reais = `${reaisf} mil e `            
-            }
-
+          
             
             
             
@@ -139,22 +158,80 @@
                 var esposa = ""
             }
 
+            //${valorTerra} - ${dadoAreaTotal} - ${dadoStringTotal}
 
             imprimeProtocolo.innerHTML = `PROTOCOLO ${proT}/2021`
-            cabecaDesc.innerHTML = `${valorTerra} - ${dadoAreaTotal} - ${dadoStringTotal}Certifico a pedido verbal e protocolado de <strong>${nSol}</strong> pessoa interessada  que,  verificando os valores de Terrenos Rurais do CTM <strong>(Código Tributário Municipal) e CVTN (Comissão de Valor da Terra Nua)</strong>, verifica-se constar o seguinte: 
-            O Imóvel ${nomeFazenda}, lugar denominado ${denominacaoFazenda}, imóvel: MATRICULA ${matriculaFazenda}, fls ${folhaRegistro}, LIVRO ${livroRegistro} feito em ${diaRegistro} de ${mesRegistro}  ${anoRegistro}, propriedade de ${nomeProprietario}, CPF: ${cpfProprietario}, identidade de número ${identidadeProprietario}, ${esposa} com área total de ${areaTotalN} (${exteAlqueire}${exteHectares}${exteAres}${exteCentiares}), descrita como ${descricaoAptdao} de acordo com o solicitante, com valor total de ${valorTerra} ( ${milhoes} ${milhares} ${reais} ${centavos}), sendo o preço por Hectare ${valorporHectare}, localizado neste Município de Lagoa dos Patos – MG
-            ${alqueireM}, ${hectaresM}, ${aresM}. ${centiaresM}`
-
+            cabecaDesc.innerHTML = `<p>
+            Certifico a <strong>pedido verbal e protocolado</strong> de <strong>${nSol}</strong>, pessoa interessada e a quem interessar que,  verificando os valores de Terrenos Rurais do CTM <strong>(Código Tributário Municipal) e CVTN (Comissão de Valor da Terra Nua)</strong>, verifica-se constar o seguinte: </br>
+    O Imóvel <strong>${nomeFazenda}</strong>, lugar denominado <strong>${denominacaoFazenda}</strong>, imóvel: ${matriculafFazenda}${folhaRegistro}${livroRegistro}, registrado em <strong>${diaRegistro} de ${mesRegistro}  ${anoRegistro}</strong>, propriedade de: <strong>${nomeProprietario}</strong>, CPF: ${cpfProprietario}, ${identidadeProprietario} ${esposa} com área total de <strong>${areaTotalN}</strong> <strong><i>(${exteAlqueire}${exteHectares},${exteAres}${exteCentiares})</i></strong>, descrita nesta avaliação como <strong>${descricaoAptdao}</strong>, com valor total de <strong>${valorTerra}</strong> <i><strong>( ${milhoes} ${milhares} ${reais} ${centavos})</strong></i>, sendo o preço por Hectare ${valorporHectare}, definido por Comissão de VTN (Valor de Terra Nua), localizado neste Município de Lagoa dos Patos – MG.
+        </p>
+        <div>
+            <div class="tabelaInfo"> 
+                <h5 class="leiAnexo">VALOR VENAL RURAL - LAGOA DOS PATOS - MG<br> Avalição de Terra Nua/${anoHoje}</h5>
+                <table>
+                    <tr>
+                        <td class="linhaTab corLinha">Item</td>
+                        <td class="linhaTab corLinha">Área</td>
+                        <td class="linhaTab corLinha">Valor por Ha</td>
+                        <td class="linhaTab corLinha">Caracteristicas da Área</td>     
+                        <td class="linhaTab corLinha">Valor Venal Total</td>                            
+                        
+                        
+                    </tr>
+                    <tr >  
+                        <td class="linhaTab">01</td>
+                        <td class="linhaTab">${areaTotalN} Ha</td>
+                        <td class="linhaTab">${valorporHectare}</td>
+                        <td class="linhaTab">Detalhes da terra: ${descricaoAptdao}</td>       
+                        <td class="linhaTab">${valorTerra}</td>                          
+                       
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="valorVenais">
             
+        </div>
 
-            localEData.innerHTML = `Lagoa dos Patos – MG, ${diaHoje} de ${mesHoje} de ${anoHoje}`
-
-            operador.innerHTML = `${funcSelecionado}`
+       <div class="assinaturasEQr">
+        <div class="assEsquerdo">
             
-          
-    
+        </div>
+        <div class="assDireito">
+            <div class="nomeAss">
+                <div class="AssMaior">${funcSelecionado}</div>
+                <div class="cpfAss">Funcionário Responsável</div>
+            </div>
+            <div class="DadosAss">
+                <p class="assinaEData">
+                    Emitido Digitalmente por</br>
+                    <strong>${funcSelecionado}</strong> <br>Emissão e horário: <br>${diaHoje}/${mesHoje}/${anoHoje} - ${horaNow}:${minuNow}hs <br> -3 UTM LDP MG</div>
+                </p>
+            </div>
+        </div>
+        </div>
+        <div>
+            <h2>
+                Lagoa dos Patos – MG, ${diaHoje} de ${mesHoje} de ${anoHoje}.
+            </h2>
+            <div class="assinaTOperador">
+                <p>
+                    ________________________________________
+                </p>
+                <div class="AssinOp">${funcSelecionado}
+                </div>
+                <p>
+                    Divisão de Receitas e Cadastramento Imobiliário
+                    Município de Lagoa dos Patos/MG –
+                    CNPJ 16.901.381/0001-10
+                </p>
+            </div>
+            <div>             
+                <img style="width: 100%;" src="src/pe-lagoa-dos-patos-mg-min.png" alt="">
+            </div>`
+
             window.alert(`Avaliação Gerada com Sucesso, clique em "IMPRIMIR AGORA"`)
-    
+            tituloSalvar.innerHTML = `Avaliação Rural ${nomeProprietario} - ${nSol} ${diaHoje} de ${mesHoje} de ${anoHoje}`    
     
     
              var displayImp = document.getElementById('avaliacaoFundo').style.display;
@@ -430,6 +507,8 @@
 
     function calculaData(){
             let dataDoc = new Date();
+            let horaDoc = dataDoc.getHours();
+            let minDoc = dataDoc.getMinutes();
             let diaDoc = dataDoc.getDate();
             let mesDoc = dataDoc.getMonth();
             let anoDoc = dataDoc.getFullYear();
@@ -463,7 +542,44 @@
             }else if(mesDoc == 11){
                 var mesDDoc = "Dezembro"
             }
-           return [diaDoc, mesDDoc, anoDoc]
+           return [diaDoc, mesDDoc, anoDoc, horaDoc, minDoc]
+    }
+    
+
+    function mesdeReg(numb) {
+        
+        let mesDoc = parseInt(numb) - 1;
+        
+        if (mesDoc==0){
+            var mesDDoc = "Janeiro"
+        } else if (mesDoc == 1){
+            var mesDDoc = "Fevereiro"
+        }
+        else if (mesDoc == 2){
+            var mesDDoc = "Março"
+        }
+        else if (mesDoc == 3){
+            var mesDDoc = "Abril"
+        }
+        else if (mesDoc == 4){
+            var mesDDoc = "Maio"
+        }
+        else if (mesDoc == 5){
+            var mesDDoc = "Junho"
+        }else if (mesDoc == 6){
+            var mesDDoc = "Julho"
+        }else if (mesDoc == 7){
+            var mesDDoc = "Agosto"
+        }else if (mesDoc == 8){
+            var mesDDoc = "Setembro"
+        }else if (mesDoc == 9){
+            var mesDDoc = "Outubro"
+        }else if (mesDoc == 10){
+            var mesDDoc = "Novembro"
+        }else if(mesDoc == 11){
+            var mesDDoc = "Dezembro"
+        }
+        return mesDDoc;
     }
 
 

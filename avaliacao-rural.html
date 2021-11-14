@@ -10,7 +10,7 @@
     <script src="main-rural.js"></script>
     <title id="tituloSalvar"></title>
 </head>
-<body onload="horaAgora()">
+<body onload="caalcularAvaliacao()">
     <div id="dadosDiv">
         <div class="fundoInsereDados"> 
             <fieldset>
@@ -120,7 +120,9 @@
                                 <option value="1200" id="pastagemplantada">Pastagem Plantada </option>
                                 <option value="600" id="silvicultura">Silvicultura ou Pastagem Natural</option>
                                 <option value="500" id="preservacao">Presenvação da Fauna e Flora  </option>
-                            </select></td>
+                            </select>
+                            <a href="https://www.salamineira.com/valor-terra-nua/"><input type="button" value="Valor Terra Nua"></a></td>
+                            
                         </tr>
                         <tr>
                             <td class="IDados">Passe o Mouse para mais informações.</td>
@@ -191,7 +193,7 @@
         <div class="folhaA4">
             <div>
                 <div >
-                    <img style="width: 350px; margin: auto;" src="src/logo-2-lagoa-dos-patos-mg.svg" alt="">
+                    <img style="width: 100%; margin: auto;" src="src/logo-2-lagoa-dos-patos-mg.svg" alt="">
                 </div>
                 
             </div>
@@ -199,49 +201,18 @@
                 <h1>CERTIDÃO DE VALOR VENAL DE IMÓVEL RURAL</h1>
                 <h2 class="protocolN" id="imprimeProtocolo">XXXXXXX  prot/ano</h2>
             </div>
-            <div >
-                <p id="cabecaDesc">
-                    Certifico a pedido verbal e protocolado de <strong>(nome da pessoa protocolo),</strong> pessoa interessada  que, revendo a planta
-                    Cadastral do Perímetro Urbano deste Município e a Planta de valores de
-                    Terrenos Urbanos do <strong>CTM (Código Tributário Municipal)</strong>, verifiquei que o <strong>Lote (0010) </strong>da <strong>Quadra (0004)</strong> localizado no <strong>setor (0003)</strong> com área total de <strong>162,00m2</strong>
-                    (Cento e Sessenta e dois Metros Quadrados), com área construída de <strong>44,00m2</strong>
-                    (Quarenta e quatro metros quadrados), localizado na <strong>
-                        Rua Brasília, N° 230,
-                        bairro centro,
-                    </strong> neste Município de Lagoa dos Patos – MG tem o seguinte Valor
-                    Venal (avaliado a <strong>“Preço de Tabela *Código Tributário Pág. 87</strong> - <i>
-                        Unidade de
-                        Unidade de Padrão Popular de Acabamento
-                    </i> e <strong>Pág. 90 para terrenos.</strong>”) da
-                    seguinte forma:
-                </p>
-                <div id="valorVenais">
-                    
-                </div>
-               
-                <div>
-                    <h2 id="localEData">
-                        Lagoa dos Patos – MG, (27 de maio de 2021)
-                    </h2>
-                    <div class="assinaTOperador">
-                        <p>
-                            ________________________________________
-                        </p>
-                        <div class="AssinOp" id="operador">Nome funcionario Responsável
-                        </div>
-                        <div class="nomeFuncionarios" id="funcionarioDados"></div>
-                    </div>
-                </div>
-                
+            
+            <div id="cabecaDesc">
+            
+                </div>  
+            </div> 
             </div>
             
-            <div class="peEnderecoPref">
-                <p>
-                    PRAÇA 31 DE MARÇO 111 / CENTRO / (38) 3745-1239 / CEP: 39.360-000 / LAGOA DOS PATOS / MINAS GERAIS
-                </p>
-                <p>
-                    prefeitura@lagoadospatos.mg.gov.br
-                </p>
+            
+            
+            
+            <div >
+                
             </div>
 
         </div>
