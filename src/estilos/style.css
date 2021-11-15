@@ -26,18 +26,15 @@ h2 {
     margin: 0;
     width: 100%px;
     padding: 10%;
-    height: 25cm;
-    
+    height: 25cm;   
     
 }
 .backimage{
     -webkit-print-color-adjust: exact;
-    background-image: url(src/fundo-certidao-min.jpeg);
+    background-image: url(/src/imagens/fundo-certidao-min.jpeg);
     background-size: 100%;
-    background-repeat: no-repeat;
-    
-    margin: auto;
-   
+    background-repeat: no-repeat;    
+    margin: auto;   
     
 }
 .topoBrasao{
@@ -166,7 +163,7 @@ h2 {
     display: inline-flex;
     width: 200px;
     height: 50px;
-    background-image: url(src/fundo-assinatura.jpg);
+    background-image: url(/src/imagens/fundo-assinatura.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     

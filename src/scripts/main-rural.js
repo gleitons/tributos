@@ -227,7 +227,7 @@
                 </p>
             </div>
             <div>             
-                <img style="width: 100%;" src="src/pe-lagoa-dos-patos-mg-min.png" alt="">
+                <img style="width: 100%;" src="https://www.salamineira.com/src/imagens/pe-lagoa-dos-patos-mg-min.png" alt="">
             </div>`
 
             window.alert(`Avaliação Gerada com Sucesso, clique em "IMPRIMIR AGORA"`)
@@ -503,7 +503,9 @@
     }
 
 
-
+    function fazerProtocolo(){
+        alert('POR FAVOR NÃO SE ESQUEÇA DE FAZER O PROTOCOLO ANTES DE COMEÇAR')
+    }
 
     function calculaData(){
             let dataDoc = new Date();

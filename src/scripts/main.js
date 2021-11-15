@@ -309,4 +309,7 @@
                 document.getElementById(el).style.display = 'none';
         }
 
+        function fazerProtocolo(){
+            alert('POR FAVOR NÃO SE ESQUEÇA DE FAZER O PROTOCOLO ANTES DE COMEÇAR')
+        }
        
