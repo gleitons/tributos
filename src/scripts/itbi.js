@@ -38,7 +38,7 @@ function imprimirITBI() {
             const valorITBIImovel = calculoITBI(document.getElementById('valorITBI'))[0]
             const valorTotalITBI = calculoITBI(document.getElementById('valorITBI'))[1]
 
-            const dataHoje = `${diaHoje} de ${mesHoje} de ${anoHoje}`
+            const dataHoje = `${diaHoje} de ${mesHoje} de ${anoHoje}`;
 
             const adquirenteCompraR = document.getElementById('adquirenteITBI');
             const adquirenteCompra = String(adquirenteCompraR.value);
