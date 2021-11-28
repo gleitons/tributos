@@ -1,10 +1,16 @@
 body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(231, 231, 231);
 }
 fieldset{
     border-radius: 4px;
     background-color: rgb(255, 255, 255);
 }
+legend{
+    font-size: 13px;
+    font-weight: 700;
+}
+
 .infoTopo {
     text-align: center;
     
@@ -24,7 +30,7 @@ fieldset{
     font-size: 13px;
 }
 
-.marca {
+.marcda {
     border: rgb(54, 54, 54) solid 1px;
   
 }
@@ -34,29 +40,113 @@ fieldset{
     margin-left: -100px;
   
 }
+.topoGuia {
+    background-color: white;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 5px;
+}
 .dInlineflex {
     display: flex;
     
     
+    
 }
 .outDoor{
+    display: none;
     padding: 5px;
     background-color: rgb(231, 231, 231);
 }
 .paddInterno {
     padding: 5px;
+    
 }
 .centralizar {
     justify-content: center;
     
 }
+
 .justificaItens {
     justify-content: space-between;
 }
-.assinaturaAnalisador {
-    font-size: 10px;
+.alinharUAssinatura {
+    margin-top: 20px;
+    margin-left: 55px;
+}
+.assinaturaAnalisador > p {
+    font-size: 8px;
     text-align: center  ;
 }
 p {
-    font-size: 12px;
+    font-size: 11px;
+}
+.bloc{
+    display: block;
+}
+/* Distancias dos Dados*/
+.adquirente {
+    height: auto;
+    width: 725px;
+   
+}
+.adquirente >p {
+    margin-top: -5px;
+    font-size: 11px;
+}
+.transmitente {
+    height: auto;
+    width: 725px;
+}
+.transmitente >p{
+    margin-top: -5px;
+    font-size: 11px;
+}
+.descImovel{
+    height: 350px;
+    width: 725px;
+}
+.descImovel >p{
+    margin-top: -5px;
+    font-size: 11px;
+}
+.CRed {
+    color: red;
+}
+.calcularITB{
+    padding: 15px;
+    background-color: rgb(112, 112, 235);
+    font-size: 18px;
+    font-weight: 800;
+    border: none;
+    border-radius: 8px;
+    margin-top: 5px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.584) 0px 3px 5px 0px;
+}
+.calcularITB:hover{
+    background-color: rgb(61, 61, 247);
+    cursor: pointer;
+}
+.calcularITB:active{
+    box-shadow: inset rgb(4, 4, 4) 1px 1px 3px 1px;
+    background-color: rgb(171, 171, 174);
+}
+.insiraDadosC{
+    background-color: rgb(216, 216, 216);
+    padding: 20px;
+}
+.forSele {
+    width: 50%;
+    background-color: rgb(107, 107, 143);
+    color: white;
+    padding: 5px;
+}
+@media print {
+    .insiraDadosC {
+        display: none;
+    }
+    .outDoor{
+        display: block;
+        
+    }
 }
