@@ -141,6 +141,11 @@ p {
     color: white;
     padding: 5px;
 }
+@media (max-width:600px) {
+    
+    
+    
+}
 @media print {
     .insiraDadosC {
         display: none;

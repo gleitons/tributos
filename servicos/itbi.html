@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/estilos/css.css">
-    <script src="/src/scripts/itbi-mini.js"></script>
+    
     <div id="titleSave"><title>Emissão de ITBI - Preencher dados</title> </div>
 </head>
 <body >
@@ -37,17 +37,17 @@
             </fieldset>
             <fieldset>
                 <legend>ADQUIRENTE</legend>
-                <textarea name="" id="adquirenteITBI" placeholder="Insira o nome e dados completos do adquirinte. Max: 1.555 caraceteres. Ex: " cols="100%" rows="5"></textarea>
+                <textarea name="" id="adquirenteITBI" placeholder="Insira o nome e dados completos do adquirinte. Max: 1.555 caraceteres. Ex: " cols="50%" rows="5"></textarea>
                 <button onclick="contadordeLetras()">Verificar...</button>
                 <div id="mCaracDigitado">Quantidade max: 1050 - Seu texto: ???</div>
             </fieldset>
             <fieldset>
                 <legend>TRANSMITENTE</legend>
-                <textarea name="" id="transmitenteITBI" placeholder="Insira o nome e dados completos do adquirinte. Max: 1.555 caraceteres. Ex: " cols="100%" rows="5"></textarea>
+                <textarea name="" id="transmitenteITBI" placeholder="Insira o nome e dados completos do adquirinte. Max: 1.555 caraceteres. Ex: " cols="50%" rows="5"></textarea>
             </fieldset>
             <fieldset>
                 <legend>DESCRIÇÃO DO IMÓVEL</legend>
-                <textarea name="" id="descricaoImovelITBI" placeholder="Insira o nome e dados completos do adquirinte. Max: 1.555 caraceteres. Ex: " cols="100%" rows="5"></textarea>
+                <textarea name="" id="descricaoImovelITBI" placeholder="Insira o nome e dados completos do adquirinte. Max: 1.555 caraceteres. Ex: " cols="50%" rows="5"></textarea>
             </fieldset>
             <fieldset>
                 <legend>NATUREZA DA TRANSMISSÃO</legend>
@@ -301,5 +301,6 @@
             </div>
         </div>
     </div>
+    <script src="/src/scripts/itbi-mini.js"></script>
 </body>
 </html>
