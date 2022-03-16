@@ -48,7 +48,8 @@ function gerarPDF() {
         alert(valorT)
     }
     else {
-        alert("Erro no valor")
+        console.log("ERRO - VALOR")
+        // alert("Erro no valor")
     }
     
     const logo = fundoL();
@@ -248,12 +249,12 @@ doc.setTextColor("#000");
 doc.setFont("helvetica", "bold");
 doc.text("* Valor Venal: ", 20, 175);
 
-alert("até aqui")
+// alert("até aqui")
 doc.setFontSize(13);
 doc.setTextColor("#000");
 doc.setFont("helvetica", "normal");
 doc.text(`R$ ${valorT}  (Este é o valor do imóvel`, 55, 175);
-alert("até aqui")
+// alert("até aqui")
 
 doc.setFontSize(13);
 doc.setTextColor("#000");
