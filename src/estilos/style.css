@@ -107,8 +107,9 @@ h2 {
     padding: 10px;
     border-radius: 6px;
     font-weight: 700;
+    cursor: pointer;
 }
-.botaoEnviar:focus {
+.botaoEnviar:active {
     box-shadow: inset black 1px 2px 2px 1px;
 }
 .backimage {
