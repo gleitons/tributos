@@ -317,7 +317,7 @@ doc.setTextColor("#000");
 doc.setFont("helvetica", "normal");
 doc.text("prefeitura@lagoadospatos.mg.gov.br", 105, 275, null, null, "center");
 
-doc.save('a4.pdf')
+doc.save(`${proprietario} - ${quadra} - ${lote}.pdf`)
 }
 
 
