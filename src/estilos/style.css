@@ -1,3 +1,24 @@
+.imagemTerraNua {
+    width: 1024px;
+    position: relative;
+}
+.imagemTerraNua i{
+    position: absolute;
+    font-size: 20px;
+    top: 5px;
+    left: 20px;
+    padding: 5px;
+    color: red;
+    border-radius: 8px;
+    background-color: black;
+    cursor: pointer;
+}
+.esconde {
+    display: none;
+}
+.mostra {
+    display: block;
+}
 .marca {
     border: black solid 1px;
 }

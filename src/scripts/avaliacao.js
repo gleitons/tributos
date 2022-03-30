@@ -1,3 +1,14 @@
+function fechaimageVT() {
+    document.getElementById('imageTN2022').style.display = 'none';
+}
+function abreImageVT() {
+    document.getElementById('imageTN2022').style.display = 'block';
+}
+
+
+
+
+
 function gerarPDF() {
 
     const protocolo = document.getElementById('protoEcidade').value;
